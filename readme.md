@@ -1,7 +1,21 @@
-# What
+# What does it do
 
 Retrieves the set sheets and their worksheets from Google Sheets and outputs CSVs with their
 data.
+
+Flow diagram
+
+First run:
+- Run SheetRunnable.py
+- Give permission for the relevant Google account
+- .credits/gsheets.json gets generated (token)
+
+2.+ runs:
+- Run SheetRunnable.py
+- Gets sheets defined in sheet-ids.json and worksheets
+- outputs to csv in ./out/ folder
+
+Read to wherever you want the CSV afterwards.
 
 # HOWTO
 
@@ -16,6 +30,7 @@ how to create client_secret.json for a user
     (instructions on how to get this are on the developers.google.com link above)
     - "Sheets": [ ... inside this worksheets are defined
 5. Run SheetsRunnable.py and accept the permission (this nees to be done once)
+	- command is 'py (-2.7) SheetRunnable.py'. The part in parenthesises is if there are multiple versions of Python installed, if only 2.7 ignore.
 6. Run SheetsRunnable.py (or schedule) again
 7. A folder called out is created and in it are CSV files for the configured sheets
 

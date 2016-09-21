@@ -1,0 +1,33 @@
+HOWTO:
+1) Install Python2.7, (included in distribution, not in git) (remember to tick the option to include in PATH if on Windows)
+2) Run 'py setup.py develop' from commandline (if you have other python versions installed then it's 'py -2.7 setup py develop'
+3) Follow instructions on https://developers.google.com/sheets/quickstart/python on
+how to create client_secret.json for a user
+    - Notice that the downloaded file needs to be renamed to client_secret.json
+4) configure sheet-ids.json to retrieve all the necessary sheets and sheets
+    - "SpreadSheet1" : { ... defines the name for the sheet
+    - "id":"1pNaDgWk6vrUxLwfA81nPUP06_fLqZCFmlUsrG1Z0RdI" ... defines the id for the sheet
+    (instructions on how to get this are on the developers.google.com link above)
+    - "Sheets": [ ... inside this worksheets are defined
+5) Run SheetsRunnable.py and accept the permission (this nees to be done once)
+6) Run SheetsRunnable.py (or schedule) again
+7) A folder called out is created and in it are CSV files for the configured sheets
+
+FAQ
+
+- Safe? 
+
+Yes
+
+- Does the application have access to change anything? 
+
+No, it's readonly
+
+- I borked JSON structure and everthing fails? 
+
+Redo from original development, take 
+care that all special characters are closed and commas where they should be.
+
+- Something else? 
+
+Contact johannes.sarpola@pengon.fi 

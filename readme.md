@@ -20,7 +20,7 @@ Read to wherever you want the CSV afterwards.
 # HOWTO
 
 1. Install Python2.7, (included in distribution, not in git) (remember to tick the option to include in PATH if on Windows)
-2. Run 'py setup.py develop' from commandline (if you have other python versions installed then it's 'py -2.7 setup py develop'
+2. Run 'py setup.py develop' from commandline (if you have other python versions installed then it's 'py -2.7 setup.py develop'
 3. Follow instructions on https://developers.google.com/sheets/quickstart/python on
 how to create client_secret.json for a user
     - Notice that the downloaded file needs to be renamed to client_secret.json
@@ -29,9 +29,9 @@ how to create client_secret.json for a user
     - "id":"1pNaDgWk6vrUxLwfA81nPUP06_fLqZCFmlUsrG1Z0RdI" ... defines the id for the sheet
     (instructions on how to get this are on the developers.google.com link above)
     - "Sheets": [ ... inside this worksheets are defined
-5. Run SheetsRunnable.py and accept the permission (this nees to be done once)
+5. Run GSR/SheetsRunnable.py and accept the permission (this nees to be done once)
 	- command is 'py (-2.7) SheetRunnable.py'. The part in parenthesises is if there are multiple versions of Python installed, if only 2.7 ignore.
-6. Run SheetsRunnable.py (or schedule) again
+6. Run GSR/SheetsRunnable.py (or schedule) again
 7. A folder called out is created and in it are CSV files for the configured sheets
 
 # FAQ

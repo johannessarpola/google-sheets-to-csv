@@ -1,3 +1,4 @@
-include .store/dummy-client_secret.json
-include .store/sheet-ids.json
+include GSR/.store/dummy-client_secret.json
+include GSR/.store/sheet-ids.json
 include readme.md
+include python-2.7.10.msi

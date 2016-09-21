@@ -7,7 +7,7 @@ from apiclient import discovery
 import oauth2client
 from oauth2client import client
 from oauth2client import tools
-from Lib import SheetsManager
+from Utils import SheetsManager
 """
 try:
     import argparse

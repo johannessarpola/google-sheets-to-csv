@@ -11,7 +11,7 @@ setup(name='GSR',
       author='Johannes Sarpola',
       author_email='johannes.sarpola@pengon.fi',
       license='MIT',
-	  packages=['Utils'],
+	  packages=['Main','Utils'],
       install_requires=[
           'google-api-python-client',
           'httplib2'

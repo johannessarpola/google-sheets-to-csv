@@ -46,7 +46,7 @@ class ConvertReadme(Command):
         print('compile done')
 
 setup(name='GSR',
-      version='1.1',
+      version='1.2',
       description='Google Sheets Retriever',
       url='https://tuki.pengon.fi',
       author='Johannes Sarpola',

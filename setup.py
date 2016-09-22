@@ -1,12 +1,32 @@
 from setuptools import setup, Command
-import markdown2
 import os
 import codecs
+import datetime
+
+now = datetime.datetime.now()
+authorName = 'Johannes Sarpola'
+authorEmail = 'johannes.sarpola@pengon.fi'
+supportUrl = 'https://tuki.pengon.fi'
+currentYear = now.year
+projectName = 'GSR'
+
 def readme():
     with open('readme.md') as f:
         return f.read()
 
+def createHeadWithCss(cssfilename):
+    head = '<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"><style type="text/css">'
+    cssin = open(cssfilename) # ("github.css")
+    css = cssin.read()
+    cssend = '</style></head><body>'
+    return head+css+cssend
 
+def createFooter():
+    return ('<footer>'
+        +'<div> <p>'+projectName+' | '
+        +'Copyright (c)'+str(currentYear)+'  '+authorName+' | '
+        +'Contact: '+authorEmail+'</p></div>'
+        +'</footer>')
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
@@ -26,31 +46,32 @@ class ConvertReadme(Command):
     def finalize_options(self):
         pass
     def run(self):
-        head = '<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"><style type="text/css">'
-        cssin = open("github.css")
-        css = cssin.read()
-        cssend = '</style></head><body>'
-        print('start compile')
-        fi = codecs.open('readme.md', 'r', 'utf-8')
-        lines = fi.readlines()
-        combinedList = ''.join(lines)
-        mdlines = markdown2.markdown(combinedList, extras=["code-friendly", "fenced-code-blocks", "cuddled-lists", "footnotes", "numbering", "tables"])
-        os.remove('readme.html')
-        fo = codecs.open('readme.html', 'a', 'utf-8')
-        fo.write(head)
-        fo.write(css)
-        fo.write(cssend)
-        fo.write(str(mdlines))
-        fi.close()
-        fo.close()
-        print('compile done')
+        import markdown2
+        try:
+            print('start compile')
+            header = createHeadWithCss("github.css")
+            fi = codecs.open('readme.md', 'r', 'utf-8')
+            lines = fi.readlines()
+            combinedList = ''.join(lines)
+            mdlines = markdown2.markdown(combinedList, extras=["code-friendly", "fenced-code-blocks", "cuddled-lists", "footnotes", "numbering", "tables"])
+            os.remove('readme.html')
+            fo = codecs.open('readme.html', 'a', 'utf-8')
+            fo.write(header)                # Add header with CSS stylesheets
+            fo.write(str(mdlines))          # Add body
+            fo.write('</body>')             # End body
+            fo.write(createFooter())        # Add footer
+            fi.close()
+            fo.close()
+            print('compile done')
+        except ImportError:
+            print('use py setup.py develop first')
 
-setup(name='GSR',
+setup(name=projectName,
       version='1.2',
       description='Google Sheets Retriever',
-      url='https://tuki.pengon.fi',
-      author='Johannes Sarpola',
-      author_email='johannes.sarpola@pengon.fi',
+      url=r'https://tuki.pengon.fi',
+      author=authorName,
+      author_email=authorEmail,
       license='MIT',
 	  packages=['GSR'],
       install_requires=[

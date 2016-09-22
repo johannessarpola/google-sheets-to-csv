@@ -8,13 +8,13 @@ import oauth2client
 from oauth2client import client
 from oauth2client import tools
 import SheetsManager
-"""
+
 try:
     import argparse
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 except ImportError:
     flags = None
-"""
+
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
@@ -106,7 +106,7 @@ def main():
     logging.info("Started retrieval")
     credentials = get_credentials()
     logging.info("Got credentials")
-    # Authorize calls 
+    # Authorize calls
     http = authenticateHttp(credentials)
     logging.info("HTTP Authenticated")
 

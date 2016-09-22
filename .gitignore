@@ -1,6 +1,7 @@
 client_secret.json
 out/
 *.log
+*.msi
 # Created by https://www.gitignore.io/api/python,git
 
 ### Python ###

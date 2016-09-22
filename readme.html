@@ -1,0 +1,375 @@
+<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"><style type="text/css">body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("../../images/modules/pulls/dirty-shade.png") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+</style></head><body><h1>What does it do</h1>
+
+<p>Retrieves the set sheets and their worksheets from Google Sheets and outputs CSVs with their
+data.</p>
+
+<p>Flow diagram</p>
+
+<p>First run:</p>
+
+<ul>
+<li>Run SheetRunnable.py</li>
+<li>Give permission for the relevant Google account</li>
+<li>.credits/gsheets.json gets generated (token)</li>
+</ul>
+
+<p>2.+ runs:</p>
+
+<ul>
+<li>Run SheetRunnable.py</li>
+<li>Gets sheets defined in sheet-ids.json and worksheets</li>
+<li>outputs to csv in ./out/ folder</li>
+</ul>
+
+<p>Read to wherever you want the CSV afterwards.</p>
+
+<h1>HOWTO</h1>
+
+<ol>
+<li>Install Python2.7, (included in distribution, not in git) (remember to tick the option to include in PATH if on Windows)</li>
+<li>Run 'py setup.py develop' from commandline (if you have other python versions installed then it's 'py -2.7 setup.py develop'</li>
+<li>Follow instructions on https://developers.google.com/sheets/quickstart/python on
+how to create client_secret.json for a user
+<ul>
+<li>Notice that the downloaded file needs to be renamed to client_secret.json</li>
+</ul></li>
+<li>configure sheet-ids.json to retrieve all the necessary sheets and sheets
+<ul>
+<li>"SpreadSheet1" : { ... defines the name for the sheet</li>
+<li>"id":"1pNaDgWk6vrUxLwfA81nPUP06_fLqZCFmlUsrG1Z0RdI" ... defines the id for the sheet
+(instructions on how to get this are on the developers.google.com link above)</li>
+<li>"Sheets": [ ... inside this worksheets are defined</li>
+</ul></li>
+<li>Run GSR/SheetsRunnable.py and accept the permission (this nees to be done once)
+<ul>
+<li>command is 'py (-2.7) SheetRunnable.py'. The part in parenthesises is if there are multiple versions of Python installed, if only 2.7 ignore.</li>
+</ul></li>
+<li>Run GSR/SheetsRunnable.py (or schedule) again</li>
+<li>A folder called out is created and in it are CSV files for the configured sheets</li>
+</ol>
+
+<h1>FAQ</h1>
+
+<ul>
+<li><p>Python version?</p>
+
+<blockquote>
+  <p>2.7 as Goole API client wont work on 3.x, will probably change at some point.
+  Follow progress here https://github.com/google/google-api-python-client</p>
+</blockquote></li>
+<li><p>Safe?</p>
+
+<blockquote>
+  <p>Yes, pretty much. If you modify the source code, it's on your own responsibility.</p>
+</blockquote></li>
+<li><p>Do I have to give permission for Google Sheets?</p>
+
+<blockquote>
+  <p>Yes, how else would it allow to read files</p>
+</blockquote></li>
+<li><p>Will the permission expire at some point?</p>
+
+<blockquote>
+  <p>Generally they do, but couldn't find specifics. Should be quite simple to regenerate the permission by just removing C:\Users\USERNAME\.credentials\gsheets.json and rerun.</p>
+</blockquote></li>
+<li><p>Does the application have access to change anything?</p>
+
+<blockquote>
+  <p>No, it's readonly. Although you still need to take care with client_secret.json
+  as it's basically your login details but not in clear text format. You can always
+  revoke access through http://console.developers.google.com/</p>
+</blockquote></li>
+<li><p>I borked JSON structure and everthing fails?</p>
+
+<blockquote>
+  <p>Redo from original development, take
+  care that all special characters are closed and commas where they should be.</p>
+</blockquote></li>
+<li><p>Logging?</p>
+
+<blockquote>
+  <p>yes, main.log in root after first run</p>
+</blockquote></li>
+<li><p>Something else?</p>
+
+<blockquote>
+  <p>Contact johannes.sarpola@pengon.fi</p>
+</blockquote></li>
+</ul>

@@ -61,5 +61,19 @@ care that all special characters are closed and commas where they should be.
 - Logging?
 > yes, main.log in root after first run
 
-- Something else?
-> Contact johannes.sarpola@pengon.fi
+# For own development use virtualEnv
+
+Guide is here http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+Notice that /bin/ is /Scripts/ on Windows so to activate the virtual env use
+
+```
+source Scripts/activate
+```
+
+```python
+py setup.py develop # installs depenencies
+py setup.py sdist   # packages into zip
+py setup.py compile # compiles readme.md to readme.html
+py setup.py clean   # cleans root from install filesl ike .egg-info folder and such
+```

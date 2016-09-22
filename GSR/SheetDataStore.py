@@ -3,13 +3,13 @@ from pprint import pprint
 storePath = '.store'+os.path.sep
 
 def getSheetIds(filename):
-    with open(filename) as data_file:    
+    with open(filename) as data_file:
         data = json.load(data_file)
     return data
 
 def getSheetIdsRelativeAsJson(filename):
     path = getRelPathToStore()+filename
-    with open(path) as data_file:    
+    with open(path) as data_file:
         data = json.load(data_file)
     return data
 
